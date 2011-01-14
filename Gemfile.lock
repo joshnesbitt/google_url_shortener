@@ -1,11 +1,17 @@
 PATH
   remote: .
   specs:
-    google_url_shortener (0.0.1)
+    google_url_shortener (0.0.2)
+      json (= 1.4.6)
+      rest-client (= 1.6.1)
 
 GEM
   remote: http://rubygems.org/
   specs:
+    json (1.4.6)
+    mime-types (1.16)
+    rest-client (1.6.1)
+      mime-types (>= 1.16)
 
 PLATFORMS
   ruby
@@ -13,3 +19,5 @@ PLATFORMS
 DEPENDENCIES
   bundler (>= 1.0.0)
   google_url_shortener!
+  json (= 1.4.6)
+  rest-client (= 1.6.1)
