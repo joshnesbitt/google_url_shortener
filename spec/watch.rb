@@ -1,4 +1,4 @@
-# A simple alternative to autotest that isnt as painful
+# A simple alternative to autotest that isnt painful
 
 options = {
   :options => "--require '#{File.expand_path(File.dirname(__FILE__)) + "/spec_helper"}' --format nested --color",

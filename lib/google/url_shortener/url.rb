@@ -14,7 +14,7 @@ module Google
         params   = validate_and_prepare_params(:shortUrl => self.short_url, :projection => "FULL")
         response = get(params)
         
-        # TODO: get more info from response
+        # TODO: get more info from response (analytics)
         @long_url = response["longUrl"]
       end
       alias_method :expand!, :decode!
