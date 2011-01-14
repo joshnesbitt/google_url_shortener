@@ -1,15 +1,11 @@
-# TODO: remove
-require 'rubygems'
-require 'restclient'
-require 'json'
-# EO TODO
-
 module Google
   module UrlShortener
     class Base
-      URL = "https://www.googleapis.com/urlshortener/v1/url"
-      
       class << self
+        
+        def log=(logger)
+          RestClient.log = logger
+        end
         
         def api_key=(key)
           @@api_key = key

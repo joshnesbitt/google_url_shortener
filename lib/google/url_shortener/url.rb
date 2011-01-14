@@ -1,6 +1,7 @@
 module Google
   module UrlShortener
-    class Url
+    class Url < Base
+      include Request
       attr_reader :long_url, :short_url, :status
       
       def initialize(opts={})
@@ -10,33 +11,42 @@ module Google
       end
       
       def decode!
-        # check for short
-        resp = get(:shortUrl => self.short_url, :projection => "FULL")
+        params   = validate_and_prepare_params(:shortUrl => self.short_url, :projection => "FULL")
+        response = get(params)
+        
         # TODO: get more info from response
-        @long_url = resp["longUrl"]
+        @long_url = response["longUrl"]
       end
+      alias_method :expand!, :decode!
       
       def encode!
-        # check for long
-        resp = post(:longUrl => self.long_url)
-        @short_url = resp["id"]
+        params   = validate_and_prepare_params(:longUrl => self.long_url)
+        response = post(params)
+        
+        @short_url = response["id"]
       end
+      alias_method :shorten!, :encode!
       
       private
-      def post(params={})
-        # check for API key
-        params.merge!(:key => Base.api_key)
-        json = RestClient.post Base::URL, params.to_json, :content_type => :json, :accept => :json
-        JSON.parse(json)
+      def validate_and_prepare_params(params={})
+        params = params_for_request(params)
+        
+        params.each_pair do |k, v|
+          validate(k, params)
+        end
+        
+        params
       end
       
-      def get(params={})
-        # check for API key
-        params.merge!(:key => Base.api_key)
-
-        json = RestClient.get Base::URL + "?" + params.collect { |k, v| "#{k}=#{v}" }.join("&")
-        puts json
-        JSON.parse(json)
+      def params_for_request(params={})
+        base_params = { :key => self.class.api_key }
+        base_params.merge!(params)
+      end
+      
+      def validate(key, hash={})
+        if hash[key].nil? || hash[key].empty?
+          raise "Key :#{key} missing from request parameters!"
+        end
       end
     end
   end
