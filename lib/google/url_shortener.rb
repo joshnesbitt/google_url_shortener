@@ -8,15 +8,13 @@ end
 
 module Google
   module UrlShortener
-    class << self
-      
-      def shorten!(url)
-        Url.new(:long_url => url).shorten!
-      end
-      
-      def expand!(url)
-        Url.new(:short_url => url).expand!
-      end
+    
+    def self.shorten!(url)
+      Url.new(:long_url => url).shorten!
+    end
+    
+    def self.expand!(url)
+      Url.new(:short_url => url).expand!
     end
   end
 end
