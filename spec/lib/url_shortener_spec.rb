@@ -1,13 +1,6 @@
 module Google
   describe UrlShortener do
     
-    before do
-      UrlShortener::Base.api_key = "TESTKEY"
-      @short_url = "http://goo.gl/r5akx"
-      @long_url  = "http://blog.josh-nesbitt.net/"
-      @key       = UrlShortener::Base.api_key
-    end
-    
     it "should shorten a URL" do
       stub_request(Google::UrlShortener::Request::BASE_URL, :method => :post, :fixture => "shorten")
       

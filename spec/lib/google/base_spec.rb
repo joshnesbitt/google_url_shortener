@@ -14,6 +14,8 @@ module Google
         
         Base.log = $stdout
         RestClient.log.should == $stdout
+        
+        Base.log = nil
       end
     end
   end

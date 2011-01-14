@@ -2,7 +2,7 @@ module Google
   module UrlShortener
     class Url < Base
       include Request
-      attr_reader :long_url, :short_url, :status
+      attr_reader :long_url, :short_url, :status, :created_at, :analytics
       
       def initialize(opts={})
         opts.each_pair do |k, v|
@@ -14,7 +14,8 @@ module Google
         params   = validate_and_prepare_params(:shortUrl => self.short_url, :projection => Analytics::PROJECTION_LEVEL)
         response = get(params)
         
-        # TODO: get more info from response (analytics)
+        @created_at = Date.parse(response["created"])
+        @analytics  = Analytics.from_hash(response["analytics"])
         @long_url   = response["longUrl"]
       end
       alias_method :expand!, :decode!
