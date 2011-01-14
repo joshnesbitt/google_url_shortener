@@ -9,7 +9,7 @@ h1. Google Url Shortener.
 
 h2. Overview
 
-A simple library to shorten and expand goo.gl URL's.
+Google URL Shortener is a library to compress and expand goo.gl URL's. It also provides an interface to review the analytics of a short URL.
 
 
 
@@ -26,7 +26,7 @@ h2. Usage
 
 h3. Setup
 
-You need to provide an API to use the URL shortener service. To do this set the @api_key@ class variable:
+You need to provide an API key to use the URL shortener service. To do this set the @api_key@ class variable:
 
 pre. Google::UrlShortener::Base.api_key = "KEY"
 
@@ -56,6 +56,32 @@ Or the shorthand form:
 pre. Google::UrlShortener.expand!("http://goo.gl/r5akx") # => http://blog.josh-nesbitt.net
 
 
+h3. Getting more data from an expanded URL
+
+More data is available from a URL once it's been expanded:
+
+pre. url = Google::UrlShortener::Url.new(:short_url => "http://goo.gl/r5akx")
+url.expand! # => http://blog.josh-nesbitt.net
+url.created_at # => 2011-01-11
+url.created_at.year # => 2011
+url.analytics # => Google::UrlShortener::Analytics
+url.analytics.all # => Google::UrlShortener::AnalyticsGroup
+url.analytics.all.browsers # => { "Chrome" => 1 }
+url.analytics.all.countries # => { "GB" => 1 }
+url.analytics.all.platforms # => { "Macintosh" => 1 }
+url.analytics.all.referrers # => { "Unknown/empty" => 1 }
+url.analytics.all.long_url_clicks # => 23
+url.analytics.all.short_url_clicks # => 3
+
+Available scopes are:
+
+pre. all
+month
+week
+day
+two_hours
+
+E.g: @url.analytics.month@.
 
 h2. Bugs
 

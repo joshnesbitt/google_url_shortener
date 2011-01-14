@@ -9,10 +9,10 @@ Gem::Specification.new do |s|
   s.email       = ["josh@josh-nesbitt.net"]
   s.homepage    = "http://rubygems.org/gems/google_url_shortener"
   s.summary     = "A simple library to shorten and expand goo.gl URL's."
-  s.description = "Google URL Shortener is a library to compress and expand goo.gl URL's. It also provides an interface to view analytics of any given URL."
+  s.description = "Google URL Shortener is a library to compress and expand goo.gl URL's. It also provides an interface to review the analytics of a short URL."
   
   s.required_rubygems_version = ">= 1.3.6"
-  s.rubyforge_project         = "google_url_shortener"
+  s.rubyforge_project = "google_url_shortener"
   s.add_dependency "json", "1.4.6"
   s.add_dependency "rest-client", "1.6.1"
   s.add_development_dependency "bundler", ">= 1.0.0"
