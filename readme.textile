@@ -9,6 +9,8 @@ h1. Google Url Shortener.
 
 h2. Overview
 
+A simple library to shorten and expand goo.gl URL's.
+
 
 
 h2. Installation
