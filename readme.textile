@@ -26,7 +26,7 @@ h2. Usage
 
 h3. Setup
 
-You need to provide an API to use the URL shortener service. To do this set the @api_key@ class variable:
+You need to provide an API key to use the URL shortener service. To do this set the @api_key@ class variable:
 
 pre. Google::UrlShortener::Base.api_key = "KEY"
 
@@ -56,7 +56,7 @@ Or the shorthand form:
 pre. Google::UrlShortener.expand!("http://goo.gl/r5akx") # => http://blog.josh-nesbitt.net
 
 
-h3. Getting more data from an expanded url
+h3. Getting more data from an expanded URL
 
 More data is available from a URL once it's been expanded:
 
