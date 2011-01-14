@@ -11,7 +11,7 @@ module Google
       end
       
       def decode!
-        params   = validate_and_prepare_params(:shortUrl => self.short_url, :projection => "FULL")
+        params   = validate_and_prepare_params(:shortUrl => self.short_url, :projection => Analytics::PROJECTION_LEVEL)
         response = get(params)
         
         # TODO: get more info from response (analytics)

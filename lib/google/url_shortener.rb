@@ -1,7 +1,7 @@
 require 'restclient'
 require 'json'
 
-%w{ version request base url errors }.each do |f|
+%w{ version request base url analytics errors }.each do |f|
   require("#{GEM_ROOT}/lib/google/url_shortener/#{f}")
 end
 
