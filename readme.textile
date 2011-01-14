@@ -1,0 +1,46 @@
+h1. Google Url Shortener.
+
+* Overview
+* Installation
+* Usage
+* Bugs
+
+
+
+h2. Overview
+
+
+
+h2. Installation
+
+The project is hosted on rubygems.org. Getting it is simple:
+
+  gem install google_url_shortener
+
+
+
+h2. Usage
+
+
+
+h2. Bugs
+
+If you have any problems with Google Url Shortener, please file an "issue":http://github.com/joshnesbitt/google_url_shortener/issues.
+
+
+
+h2. Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+
+
+h2. Copyright
+
+Copyright (c) 2010 Josh Nesbitt <josh@josh-nesbitt.net>. See LICENSE for details.
