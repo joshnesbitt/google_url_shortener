@@ -15,7 +15,7 @@ module Google
         response = get(params)
         
         # TODO: get more info from response (analytics)
-        @long_url = response["longUrl"]
+        @long_url   = response["longUrl"]
       end
       alias_method :expand!, :decode!
       

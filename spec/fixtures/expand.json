@@ -1,0 +1,101 @@
+{
+ "kind": "urlshortener#url",
+ "id": "http://goo.gl/r5akx",
+ "longUrl": "http://blog.josh-nesbitt.net/",
+ "status": "OK",
+ "created": "2011-01-11T20:53:38.778+00:00",
+ "analytics": {
+  "allTime": {
+   "shortUrlClicks": "1",
+   "longUrlClicks": "1",
+   "referrers": [
+    {
+     "count": "1",
+     "id": "Unknown/empty"
+    }
+   ],
+   "countries": [
+    {
+     "count": "1",
+     "id": "GB"
+    }
+   ],
+   "browsers": [
+    {
+     "count": "1",
+     "id": "Chrome"
+    }
+   ],
+   "platforms": [
+    {
+     "count": "1",
+     "id": "Macintosh"
+    }
+   ]
+  },
+  "month": {
+   "shortUrlClicks": "1",
+   "longUrlClicks": "1",
+   "referrers": [
+    {
+     "count": "1",
+     "id": "Unknown/empty"
+    }
+   ],
+   "countries": [
+    {
+     "count": "1",
+     "id": "GB"
+    }
+   ],
+   "browsers": [
+    {
+     "count": "1",
+     "id": "Chrome"
+    }
+   ],
+   "platforms": [
+    {
+     "count": "1",
+     "id": "Macintosh"
+    }
+   ]
+  },
+  "week": {
+   "shortUrlClicks": "1",
+   "longUrlClicks": "1",
+   "referrers": [
+    {
+     "count": "1",
+     "id": "Unknown/empty"
+    }
+   ],
+   "countries": [
+    {
+     "count": "1",
+     "id": "GB"
+    }
+   ],
+   "browsers": [
+    {
+     "count": "1",
+     "id": "Chrome"
+    }
+   ],
+   "platforms": [
+    {
+     "count": "1",
+     "id": "Macintosh"
+    }
+   ]
+  },
+  "day": {
+   "shortUrlClicks": "0",
+   "longUrlClicks": "0"
+  },
+  "twoHours": {
+   "shortUrlClicks": "0",
+   "longUrlClicks": "0"
+  }
+ }
+}
