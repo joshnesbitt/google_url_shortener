@@ -15,11 +15,35 @@ h2. Installation
 
 The project is hosted on rubygems.org. Getting it is simple:
 
-  gem install google_url_shortener
+pre. gem install google_url_shortener
 
 
 
 h2. Usage
+
+
+h3. Setup
+
+You need to provide an API to use the URL shortener service. To do this set the @api_key@ class variable:
+
+pre. Google::UrlShortener::Base.api_key = "KEY"
+
+You can also turn on verbose logging to inspect requests made by the library. Behind the scenes the library uses "RestClient":https://github.com/archiloque/rest-client to call the API, therefore whatever you set here will be used as the RestClient log (@RestClient.log@).
+
+pre. Google::UrlShortener::Base.log = $stdout
+
+
+h3. Shorten/Expand a URL
+
+To shorten a URL:
+
+pre. url = Google::UrlShortener::Url.new(:long_url => "http://blog.josh-nesbitt.net")
+  url.shorten! # => http://goo.gl/r5akx
+
+To expand a URL:
+
+pre. url = Google::UrlShortener::Url.new(:short_url => "http://goo.gl/r5akx")
+  url.expand! # => http://blog.josh-nesbitt.net
 
 
 
