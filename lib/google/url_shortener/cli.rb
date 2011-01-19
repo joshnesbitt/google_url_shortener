@@ -81,7 +81,7 @@ module Google
           version VERSION
           banner File.read("#{GEM_ROOT}/USAGE")
           
-          opt :analytics, "show analytics", :short => "-a", :default => false
+          opt :analytics, "Show analytics when expanding a URL", :short => "-a", :default => false
         end
         
         opts.merge!(:command => args.shift)
