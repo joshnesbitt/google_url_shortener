@@ -93,7 +93,7 @@ h3. Basic usage
 
 There is also a CLI wrapper for Google URL Shortener. Firstly, you need to tell the CLI your API key:
 
-pre. googl install myapikey
+pre. googl install AIzaSyByl4x5CMcnm2rNWafmaUz5sljmzMWIgZ0
 
 This saves your API key in @~/.googl@.
 
@@ -124,6 +124,11 @@ pre. shorten (){
 	googl shorten $1 | pbcopy
 	echo "$1 shortened and copied to clipboard"
 }
+
+Example usage:
+
+pre. shorten http://example.com
+
 
 
 h2. Bugs
