@@ -3,4 +3,4 @@ require 'google_url_shortener'
 require 'google/url_shortener/cli'
 
 runner = Google::UrlShortener::CLI.new(ARGV)
-# runner.run!
+runner.run!

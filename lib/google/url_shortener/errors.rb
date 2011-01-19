@@ -9,6 +9,6 @@ module Google
       end
     end
     
-    class MissingApiKey < UrlShortenerError;end
+    class MissingApiKey < UrlShortenerError; end
   end
 end
