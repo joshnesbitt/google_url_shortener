@@ -27,7 +27,7 @@ h2. Usage
 
 h3. Setup
 
-You need to provide an API key to use the URL shortener service. To do this set the @api_key@:
+You need to provide an API key to use the URL shortener service. To do this set the @api_key@ (get one "here":https://code.google.com/apis/console):
 
 pre. Google::UrlShortener::Base.api_key = "KEY"
 
@@ -91,7 +91,7 @@ h2. CLI
 
 h3. Basic usage
 
-There is also a CLI wrapper for Google URL Shortener. Firstly, you need to tell the CLI your API key:
+There is also a CLI wrapper for Google URL Shortener. Firstly, you need to tell the CLI your API key (get one "here":https://code.google.com/apis/console):
 
 pre. googl install AIzaSyByl4x5CMcnm2rNWafmaUz5sljmzMWIgZ0
 
