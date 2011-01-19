@@ -118,7 +118,7 @@ pre. googl expand http://goo.gl/1234 -a
 
 h3. Tips
 
-You can use the CLI alonsgide something like @pbcopy@ to make shortening URL's crazy fast:
+You can use the CLI alongside something like @pbcopy@ to make shortening URL's crazy fast:
 
 pre. googl shorten http://example.com | pbcopy
 
