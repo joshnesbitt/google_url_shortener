@@ -5,6 +5,7 @@ Gem::Specification.new do |s|
   s.name        = "google_url_shortener"
   s.version     = Google::UrlShortener::VERSION
   s.platform    = Gem::Platform::RUBY
+  s.executables = %w{ googl }
   s.authors     = ["Josh Nesbitt"]
   s.email       = ["josh@josh-nesbitt.net"]
   s.homepage    = "http://rubygems.org/gems/google_url_shortener"
@@ -15,6 +16,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "google_url_shortener"
   s.add_dependency "json", "1.4.6"
   s.add_dependency "rest-client", "1.6.1"
+  s.add_dependency('trollop', '1.16.2')
   s.add_development_dependency "bundler", ">= 1.0.0"
   
   s.files        = `git ls-files`.split("\n")

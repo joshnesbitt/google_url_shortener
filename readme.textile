@@ -3,13 +3,18 @@ h1. Google Url Shortener.
 * Overview
 * Installation
 * Usage
+* CLI
 * Bugs
 
 
 
 h2. Overview
 
-Google URL Shortener is a library to compress and expand goo.gl URL's. It also provides an interface to review the analytics of a short URL.
+Google URL Shortener is a library to interact with the goo.gl URL shortener API. It provides:
+
+* A CLI to easily shorten/expand URL's
+* A clean API to handle shortening/expanding URL's in an application
+* An interface to view analytical data for any short URL
 
 
 
@@ -26,7 +31,7 @@ h2. Usage
 
 h3. Setup
 
-You need to provide an API key to use the URL shortener service. To do this set the @api_key@:
+You need to provide an API key (get one "here":https://code.google.com/apis/console) to use the URL shortener service. To do this set the @api_key@:
 
 pre. Google::UrlShortener::Base.api_key = "KEY"
 
@@ -82,6 +87,53 @@ day
 two_hours
 
 E.g: @url.analytics.month@.
+
+
+
+h2. CLI
+
+
+h3. Basic usage
+
+There is also a CLI wrapper for Google URL Shortener. Firstly, you need to tell the CLI your API key (get one "here":https://code.google.com/apis/console):
+
+pre. googl install AIzaSyByl4x5CMcnm2rNWafmaUz5sljmzMWIgZ0
+
+This saves your API key in @~/.googl@.
+
+To shorten a URL:
+
+pre. googl shorten http://example.com
+googl s http://example.com
+
+To expand a URL:
+
+pre. googl expand http://goo.gl/1234
+googl e http://goo.gl/1234
+
+You can also get analytical data from a short URL using the @-a@ or @--analytics@ flag:
+
+pre. googl expand http://goo.gl/1234 -a
+
+
+h3. Tips
+
+You can use the CLI alonsgide something like @pbcopy@ to make shortening URL's crazy fast:
+
+pre. googl shorten http://example.com | pbcopy
+
+Also use a bash function to simplify it further:
+
+pre. shorten (){
+	googl shorten $1 | pbcopy
+	echo "$1 shortened and copied to clipboard"
+}
+
+Which can be used as:
+
+pre. shorten http://example.com
+
+
 
 h2. Bugs
 
