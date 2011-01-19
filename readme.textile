@@ -10,7 +10,11 @@ h1. Google Url Shortener.
 
 h2. Overview
 
-Google URL Shortener is a library to compress and expand goo.gl URL's. It also provides an interface to review the analytics of a short URL.
+Google URL Shortener is a library to interact with the goo.gl URL shortener API. It provides:
+
+* A CLI to easily shorten/expand URL's
+* A clean API to handle shortening/expanding URL's in an application
+* An interface to view analytical data for any short URL
 
 
 
@@ -27,7 +31,7 @@ h2. Usage
 
 h3. Setup
 
-You need to provide an API key to use the URL shortener service. To do this set the @api_key@ (get one "here":https://code.google.com/apis/console):
+You need to provide an API key (get one "here":https://code.google.com/apis/console) to use the URL shortener service. To do this set the @api_key@:
 
 pre. Google::UrlShortener::Base.api_key = "KEY"
 
@@ -125,7 +129,7 @@ pre. shorten (){
 	echo "$1 shortened and copied to clipboard"
 }
 
-Example usage:
+Which can be used as:
 
 pre. shorten http://example.com
 
