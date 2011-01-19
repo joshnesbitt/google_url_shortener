@@ -5,6 +5,7 @@ Gem::Specification.new do |s|
   s.name        = "google_url_shortener"
   s.version     = Google::UrlShortener::VERSION
   s.platform    = Gem::Platform::RUBY
+  s.executables = %w{ googl }
   s.authors     = ["Josh Nesbitt"]
   s.email       = ["josh@josh-nesbitt.net"]
   s.homepage    = "http://rubygems.org/gems/google_url_shortener"
