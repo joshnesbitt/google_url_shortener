@@ -1,9 +1,10 @@
 PATH
   remote: .
   specs:
-    google_url_shortener (0.0.3)
-      json (= 1.4.6)
+    google_url_shortener (0.0.5)
+      json (>= 1.4.6)
       rest-client (= 1.6.1)
+      trollop (= 1.16.2)
 
 GEM
   remote: http://rubygems.org/
@@ -13,6 +14,7 @@ GEM
     mime-types (1.16)
     rest-client (1.6.1)
       mime-types (>= 1.16)
+    trollop (1.16.2)
 
 PLATFORMS
   ruby
@@ -21,5 +23,5 @@ DEPENDENCIES
   bundler (>= 1.0.0)
   fakeweb
   google_url_shortener!
-  json (= 1.4.6)
+  json (>= 1.4.6)
   rest-client (= 1.6.1)
