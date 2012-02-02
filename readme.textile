@@ -4,6 +4,7 @@ h1. Google Url Shortener.
 * Installation
 * Usage
 * CLI
+* Specs
 * Bugs
 
 
@@ -134,6 +135,12 @@ Which can be used as:
 pre. shorten http://example.com
 
 
+h2. Specs
+
+Run the specs with the following command:
+
+pre. bundle exec rspec --require ./spec/spec_helper.rb --format nested --color spec/lib/*.rb spec/lib/**/*.rb
+
 
 h2. Bugs
 
@@ -142,7 +149,7 @@ If you have any problems with Google Url Shortener, please file an "issue":http:
 
 
 h2. Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
