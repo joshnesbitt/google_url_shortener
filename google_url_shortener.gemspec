@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   
   s.required_rubygems_version = ">= 1.3.6"
   s.rubyforge_project = "google_url_shortener"
-  s.add_dependency "json", "1.4.6"
+  s.add_dependency "json", ">= 1.4.6"
   s.add_dependency "rest-client", "1.6.1"
   s.add_dependency('trollop', '1.16.2')
   s.add_development_dependency "bundler", ">= 1.0.0"
