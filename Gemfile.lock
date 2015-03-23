@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    google_url_shortener (0.0.7)
+    google_url_shortener (0.0.8)
       json (>= 1.4.6)
       rest-client (>= 1.6.7)
       trollop (= 1.16.2)

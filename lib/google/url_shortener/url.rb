@@ -40,8 +40,7 @@ module Google
       end
       
       def params_for_request(params={})
-        base_params = { :key => self.class.api_key }
-        base_params.merge!(params)
+        base_params = params
       end
       
       def validate(key, hash={})

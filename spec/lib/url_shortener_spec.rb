@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 module Google
   describe UrlShortener do
     

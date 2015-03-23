@@ -1,9 +1,11 @@
+require 'spec_helper'
+
 module Google
   module UrlShortener
     describe Url do
       
       it "should have the correct attributes after shortening a URL" do
-        stub_request(Google::UrlShortener::Request::BASE_URL, :method => :post, :fixture => "shorten")
+        stub_request(Google::UrlShortener::Request::BASE_URL + "?key=#{@key}", :method => :post, :fixture => "shorten")
         
         url = Google::UrlShortener::Url.new(:long_url => @long_url)
         url.shorten!
