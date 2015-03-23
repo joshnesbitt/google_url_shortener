@@ -5,12 +5,12 @@ module Google
       REQUEST_HEADERS = { :content_type => :json, :accept => :json }
 
       def post(params={})
-        response = RestClient.post(format_url_with_api_key, format_post_params(params), REQUEST_HEADERS)
+        response = RestClient.post(format_url, format_post_params(params), REQUEST_HEADERS)
         parse(response)
       end
 
       def get(params={})
-        full_url = [format_url_with_api_key, "&", format_get_params(params)].join
+        full_url = [format_url, "&", format_get_params(params)].join
         response = RestClient.get(full_url)
         parse(response)
       end
@@ -20,8 +20,8 @@ module Google
         JSON.parse(response)
       end
 
-      def format_url_with_api_key()
-        [BASE_URL, "?key=", self.class.api_key].join
+      def format_url
+        "#{BASE_URL}?key=#{self.class.api_key}"
       end
 
       def format_post_params(params={})
