@@ -14,11 +14,14 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = ">= 1.3.6"
   s.rubyforge_project = "google_url_shortener"
+
   s.add_dependency "json", ">= 1.4.6"
   s.add_dependency "rest-client", ">= 1.6.7"
   s.add_dependency 'trollop', '1.16.2'
+
   s.add_development_dependency "bundler", ">= 1.0.0"
   s.add_development_dependency "rspec", "2.8.0"
+  s.add_development_dependency "fakeweb"
 
   s.files        = `git ls-files`.split("\n")
   s.executables  = `git ls-files`.split("\n").map{|f| f =~ /^bin\/(.*)/ ? $1 : nil}.compact
