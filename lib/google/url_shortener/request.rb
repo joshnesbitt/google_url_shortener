@@ -7,15 +7,20 @@ module Google
       def post(params={})
         response = RestClient.post(format_url, format_post_params(params), REQUEST_HEADERS)
         parse(response)
+      rescue => e
+        puts e.inspect
       end
 
       def get(params={})
         full_url = [format_url, "&", format_get_params(params)].join
         response = RestClient.get(full_url)
         parse(response)
+      rescue => e
+        puts e.inspect
       end
 
-      private
+    private
+
       def parse(response)
         JSON.parse(response)
       end
