@@ -26,6 +26,24 @@ module Google
         url.created_at.month.should == 01
         url.created_at.day.should   == 11
       end
+
+      it "should permit exceptions if raise_exceptions is true" do
+        RestClient.stub(:post) { raise RestClient::Request::RequestFailed }
+        prev_val = Base.raise_exceptions
+        Base.raise_exceptions = true
+
+        url = Google::UrlShortener::Url.new(:long_url => @long_url)
+        expect { url.shorten! }.to raise_error(RestClient::Request::RequestFailed)
+
+        Base.raise_exceptions = prev_val
+      end
+
+      it "should not raise exceptions if raise_exceptions is false" do
+        RestClient.stub(:post) { raise RestClient::Request::RequestFailed }
+
+        url = Google::UrlShortener::Url.new(:long_url => @long_url)
+        expect { url.shorten! }.to_not raise_error(RestClient::Request::RequestFailed)
+      end
     end
   end
 end
