@@ -6,6 +6,7 @@ require 'fakeweb'
 include FakewebHelper
 
 RSpec.configure do |config|
+  config.mock_framework = :rspec
 
   config.before(:all) do
     Google::UrlShortener::Base.api_key = "TESTKEY"

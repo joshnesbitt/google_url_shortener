@@ -8,7 +8,11 @@ module Google
         response = RestClient.post(format_url, format_post_params(params), REQUEST_HEADERS)
         parse(response)
       rescue => e
-        puts e.inspect
+        if self.class.raise_exceptions
+          raise e
+        else
+          puts e.inspect
+        end
       end
 
       def get(params={})
@@ -16,7 +20,11 @@ module Google
         response = RestClient.get(full_url)
         parse(response)
       rescue => e
-        puts e.inspect
+        if self.class.raise_exceptions
+          raise e
+        else
+          puts e.inspect
+        end
       end
 
     private
